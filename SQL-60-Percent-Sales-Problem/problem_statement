@@ -1,0 +1,26 @@
+Problem Statement: Identify the Date When Cumulative Sales Cross 60% of Total Monthly Sales
+
+Given a table `transactions` containing transaction data for a single month, write a SQL query to identify the exact date when the cumulative sales first exceed 60% of the total monthly sales.
+
+Table Structure:
+The `transactions` table has the following columns:
+
+transaction_id (SERIAL): Unique ID for each transaction (Primary Key).
+order_id (INT): Unique ID for each order.
+transaction_date (TIMESTAMP): Date and time when the transaction occurred.
+amount (DECIMAL(10, 2)): The monetary amount of the transaction.
+
+Your Task:
+Determine the first date when the cumulative sales percentage exceeds 60% of the total sales for the month.
+
+Expected Output:
+The output should be a single date in the format `YYYY-MM-DD` representing the date when cumulative sales first surpass 60% of the total monthly sales.
+
+Considerations:
+- Utilize window functions to calculate running totals and percentages.
+- Assume that all transactions occur within a single month.
+
+Follow-up Question:
+What if I want to see the same analysis for each month or each quarter instead of just one month?
+
+Hint: Consider partitioning by month or quarter while calculating cumulative percentages.
